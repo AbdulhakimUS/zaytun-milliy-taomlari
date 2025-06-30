@@ -13,7 +13,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// menu 
+// menu
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".menu-item");
   const showMoreBtn = document.getElementById("show-more-btn");
@@ -41,9 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Скрыть прелоадер после полной загрузки
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  preloader.classList.add('hidden');
-});
+// ============ PRELOADER ============
+const preloader = document.getElementById("preloader");
+const h1 = document.querySelector(".home-h1");
+const p = document.querySelector(".home-p");
+const img = document.querySelector(".home-img");
+const start = Date.now();
 
+window.addEventListener("load", () => {
+  const elapsed = Date.now() - start;
+  const delay = Math.max(2200 - elapsed, 0);
+  setTimeout(() => {
+    preloader.classList.add("hidden");
+    setTimeout(() => {
+      preloader.remove();
+      h1.classList.add("animate");
+      p.classList.add("animate");
+      img.classList.add("animate");
+    }, 500);
+  }, delay);
+});
