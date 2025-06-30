@@ -16,6 +16,15 @@
   --green: #697a24;
 }
 
+
+.menu-item {
+  display: block;
+}
+
+.menu-item.hidden {
+  display: none;
+}
+
 /* navbar */
 
 header {
