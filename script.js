@@ -92,3 +92,31 @@ window.addEventListener("load", () => {
     }, 500);
   }, delay);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinksContainer = document.getElementById("navLinks");
+  const navLinks = document.querySelectorAll("#navLinks a");
+  const burger = document.querySelector(".burger-button");
+
+  // Toggle menyu ochish/yopish
+  window.toggleMenu = function () {
+    navLinksContainer.classList.toggle("active");
+  };
+
+  // Linkni bosganda menyuni yopish
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinksContainer.classList.remove("active");
+    });
+  });
+
+  // Bo'sh joyga bosganda menyuni yopish
+  document.addEventListener("click", (e) => {
+    if (
+      !navLinksContainer.contains(e.target) &&
+      !burger.contains(e.target)
+    ) {
+      navLinksContainer.classList.remove("active");
+    }
+  });
+});
