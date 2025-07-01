@@ -592,6 +592,13 @@ header a:hover{
   margin: 10px 0;
 }
 
+.menu-items:empty,
+.menu-items:not(:has(.menu-item:not([style*="display: none"]))) {
+  display: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .menu-button {
   width: 100%;
   display: flex;
