@@ -591,6 +591,7 @@ header a:hover{
 .price{
   display: flex;
   flex-wrap: wrap;
+  width: 200px;
 }
 .menu-title-h1 {
   color: white;
