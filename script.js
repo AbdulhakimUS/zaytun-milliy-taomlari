@@ -17,27 +17,58 @@ window.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".menu-item");
   const showMoreBtn = document.getElementById("show-more-btn");
-  let expanded = false; // состояние меню
+  const hideBtn = document.getElementById("hide-btn");
 
-  // Сначала показываем только первые 3
-  items.forEach((item, index) => {
-    if (index > 2) {
-      item.classList.add("hidden");
-    }
-  });
+  const step = 3;
+  let visibleCount = 3;
+  let firstClick = true;
 
-  // Обработчик нажатия кнопки
-  showMoreBtn.addEventListener("click", () => {
-    expanded = !expanded;
-
+  function updateVisibility() {
     items.forEach((item, index) => {
-      if (index > 2) {
-        item.classList.toggle("hidden", !expanded);
-      }
+      item.style.display = index < visibleCount ? "block" : "none";
     });
 
-    // Меняем текст кнопки
-    showMoreBtn.textContent = expanded ? "Yopish" : "To‘liq menyuni ko‘rish";
+    // Управление кнопками
+    showMoreBtn.style.display = visibleCount >= items.length ? "none" : "inline-block";
+    hideBtn.style.display = visibleCount > 3 ? "inline-block" : "none";
+  }
+
+  // Инициализация
+  updateVisibility();
+
+  // "To‘liq menyuni ko‘rish" → "Keyingi"
+  showMoreBtn.addEventListener("click", () => {
+    visibleCount += step;
+
+    if (firstClick) {
+      showMoreBtn.textContent = "Keyingi";
+      firstClick = false;
+    }
+
+    // Ограничим максимумом
+    if (visibleCount > items.length) {
+      visibleCount = items.length;
+    }
+
+    updateVisibility();
+  });
+
+  // "Yopish"
+  hideBtn.addEventListener("click", () => {
+    // Если все карточки показаны — скрываем всё, кроме первых 3
+    if (visibleCount >= items.length) {
+      visibleCount = 3;
+      firstClick = true;
+      showMoreBtn.textContent = "To‘liq menyuni ko‘rish";
+    } else {
+      // Иначе просто закрываем по 3
+      visibleCount -= step;
+      if (visibleCount < 3) {
+        visibleCount = 3;
+      }
+    }
+
+    updateVisibility();
   });
 });
 
