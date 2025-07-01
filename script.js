@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Управление кнопками
-    showMoreBtn.style.display = visibleCount >= items.length ? "none" : "inline-block";
+    showMoreBtn.style.display =
+      visibleCount >= items.length ? "none" : "inline-block";
     hideBtn.style.display = visibleCount > 3 ? "inline-block" : "none";
   }
 
@@ -112,10 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Bo'sh joyga bosganda menyuni yopish
   document.addEventListener("click", (e) => {
-    if (
-      !navLinksContainer.contains(e.target) &&
-      !burger.contains(e.target)
-    ) {
+    if (!navLinksContainer.contains(e.target) && !burger.contains(e.target)) {
       navLinksContainer.classList.remove("active");
     }
   });
@@ -146,3 +144,26 @@ video.addEventListener("ended", () => {
   playBtn.style.display = "flex";
 });
 
+const navLinks = document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+sections.forEach((section) => {
+  if (section.id) observer.observe(section);
+});
