@@ -1,14 +1,18 @@
 /* ≥1400px */
-@media (max-width: 1400px) {}
+@media (max-width: 1400px) {
+}
 
 /* ≥1200px */
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+}
 
 /* ≥1120px */
-@media (max-width: 1120px) {}
+@media (max-width: 1120px) {
+}
 
 /* ≥1024px */
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+}
 
 /* ≥992px */
 @media (max-width: 992px) {}
@@ -77,12 +81,10 @@
     flex: 1 1 100%;
     margin-bottom: 20px;
   }
-
   .instagram-gallery img {
     width: 150px;
     height: 80px;
   }
-
   .img-logo {
     margin-top: 20px;
     margin-left: -40px;
@@ -91,12 +93,10 @@
     width: 100%;
     height: 100%;
   }
-
   .left-about-img {
     width: 300px;
     height: 250px;
   }
-
   .left-about-card {
     padding: 20px;
     width: 230px;
@@ -217,6 +217,17 @@
 
 /* ≥576px */
 @media (max-width: 576px) {
+  .header-text {
+    flex-direction: column !important;
+    gap: 0;
+    text-align: center;
+  }
+
+  .header-text-2 {
+    gap: 0 !important;
+    flex-direction: column;
+    text-align: center;
+  }
   .img-logo {
     margin-top: 20px;
     margin-left: -90px;
@@ -229,6 +240,17 @@
 
 /* ≥480px */
 @media (max-width: 480px) {
+  .header-text {
+    flex-direction: column !important;
+    gap: 0;
+    text-align: center;
+  }
+
+  .header-text-2 {
+    gap: 0 !important;
+    flex-direction: column;
+    text-align: center;
+  }
   .img-logo {
     margin-top: 20px;
     margin-left: -115px;
@@ -241,6 +263,17 @@
 
 /* ≥425px */
 @media (max-width: 425px) {
+  .header-text {
+    flex-direction: column !important;
+    gap: 0;
+    text-align: center;
+  }
+
+  .header-text-2 {
+    gap: 0 !important;
+    flex-direction: column;
+    text-align: center;
+  }
   .img-logo {
     margin-top: 35px;
     margin-left: -105px;
@@ -253,22 +286,58 @@
 
 /* ≥400px */
 @media (max-width: 400px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-text {
+    flex-direction: column !important;
+    gap: 0;
+    text-align: center;
+  }
+  .header-text-2 {
+    gap: 0 !important;
+    flex-direction: column;
+    text-align: center;
+  }
   .instagram-gallery img {
     width: 130px;
   }
 
   .img-logo {
     margin-top: 50px;
-    margin-left: -100px;
+    margin-left: 15px;
     max-width: 395px;
     max-height: 395px;
     width: 100%;
     height: 100%;
   }
+  .left-about-card h2 {
+    margin-bottom: -15px;
+    margin-top: 0;
+  }
+  .left-about-card {
+    padding: 20px 10px;
+  }
 }
 
 /* ≥380px */
 @media (max-width: 380px) {
+  /* header */
+  header {
+    display: block;
+    font-size: 10px;
+  }
+  #home {
+    height: 600px;
+  }
 
   /* header */
   header {
@@ -302,4 +371,5 @@
 @media (max-width: 350px) {}
 
 /* ≥320px */
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+}
