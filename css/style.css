@@ -588,7 +588,10 @@ header a:hover{
   background-color: var(--last-color);
   color: white;
 }
-
+.price{
+  display: flex;
+  flex-wrap: wrap;
+}
 .menu-title-h1 {
   color: white;
   font-weight: bold;
