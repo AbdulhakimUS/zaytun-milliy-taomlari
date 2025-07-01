@@ -580,7 +580,7 @@ header a:hover{
 /* menu */
 
 #menu {
-  padding: 30px;
+  padding: 40px 30px;
   background-color: var(--last-color);
   color: white;
 }
