@@ -18,7 +18,9 @@
     .menu-toggle {
       display: block;
     }
-  
+    .navbar{
+      padding: 0.5px 0;
+    }
     .nav-links {
       display: none;
       /* flex-direction: column; */
@@ -52,10 +54,11 @@
     }
   
     header a {
-      font-size: 10px;
+      font-size: 8px;
     }
     .video{
       display: block;
+      margin: 50px 0 0 0 ;
     }
     .video video{
       width: 100%;
@@ -95,9 +98,6 @@
     }
     .container-home{
       background-color: white;
-    }
-    #home {
-      height: 650px !important;
     }
     .left-about-card h2{
       margin-top: 0;
@@ -140,6 +140,18 @@
     }
     .container-footer{
       display: block !important;
+    }
+    .content-center {
+      height: auto;
+    }
+    .content-center img{
+      margin: 0 100px;
+    }
+    .photo-wrapper{
+      height: auto;
+    }
+    #home{
+      height: 400px;
     }
   }
   
@@ -215,10 +227,6 @@
         display: block;
         font-size: 10px;
     }
-    #home{
-      height: 600px;
-    }
-
     /* Navbar */
     .nav-links {
         display: none;
