@@ -64,6 +64,9 @@
       width: 100%;
       height: auto;
     }
+    .video-wrapper{
+      width: auto;
+    }
     .footer-section {
         flex: 1 1 100%;
         margin-bottom: 20px;

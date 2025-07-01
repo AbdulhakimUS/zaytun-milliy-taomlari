@@ -268,10 +268,38 @@ header a:hover{
   padding: 50px 20px;
 }
 
-.video video {
+.video-wrapper {
+  position: relative;
   width: 800px;
+}
+
+.video video {
+  width: 100%;
   border: 5px solid var(--yellow);
   border-radius: 20px 0 20px 0;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.play-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* video osti */

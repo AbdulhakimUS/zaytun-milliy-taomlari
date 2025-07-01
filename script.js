@@ -120,3 +120,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// video uchun
+const video = document.getElementById("myVideo");
+const playBtn = document.getElementById("playBtn");
+
+// Videoni bosganda ham pauza/play bo'lishi uchun
+video.addEventListener("click", toggleVideo);
+
+// Tugmani bosganda ham
+playBtn.addEventListener("click", toggleVideo);
+
+function toggleVideo() {
+  if (video.paused) {
+    video.play();
+    playBtn.style.display = "none";
+  } else {
+    video.pause();
+    playBtn.style.display = "flex";
+  }
+}
+
+// Video tugamaydi (loop), lekin agar istasangiz to'xtaganda tugma chiqishini qo'shishingiz mumkin
+video.addEventListener("ended", () => {
+  playBtn.style.display = "flex";
+});
+
