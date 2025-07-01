@@ -138,6 +138,9 @@
     .food-instagram{
       display: none;
     }
+    .container-footer{
+      display: block !important;
+    }
   }
   
 
