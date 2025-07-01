@@ -106,7 +106,9 @@ header a {
 header i {
   color: var(--text-color);
 }
-
+header a:hover{
+  color: var(--fill-color) !important;
+}
 /* Navbar */
 .navbar {
   background-color: var(--green);
@@ -582,7 +584,6 @@ header i {
   margin: 20px 0;
   text-decoration: none;
   gap: 40px;
-  margin-left: -30px;
 }
 
 .menu-button button {
