@@ -22,6 +22,9 @@
   .corner-images{
     display: none;
   }
+  .btn-home{
+    padding: 10px 14px;
+  }
   .menu-toggle {
     display: block;
   }
