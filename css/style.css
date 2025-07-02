@@ -277,7 +277,7 @@ header a:hover {
   position: absolute;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
 }
 
 .osh-corner {
