@@ -71,7 +71,7 @@
   <nav class="navbar">
     <div class="container-fluid" style="max-width: 1440px; width: 100%; margin: auto;">
       <a class="logo" href="#"><img src="./img/zaytun logo navbar white .png" alt="logo"></a>
-      
+
       <div class="nav-links" id="navLinks">
         <a href="#home">Kirish</a>
         <a href="#video">Video</a>
@@ -80,11 +80,11 @@
         <a href="#customers">Izohlar</a>
         <a href="#book-section">Joy band qilish</a>
       </div>
-  
+
       <div class="menu-toggle burger-button" onclick="toggleMenu()">☰</div>
     </div>
   </nav>
-  
+
   <!-- navbar -->
 
   <!-- Home -->
@@ -100,6 +100,12 @@
             <button class="btn-book-table btn btn-home"><a href="#book-section">Book a Table</a></button>
             <button class="btn-view-menu btn btn-home"><a href="#menu">View Menu</a></button>
           </div>
+        </div>
+        <div class="corner-images">
+          <img src="./menu/osh.jpg" alt="osh" class="corner-img osh-corner top-left">
+          <img src="./menu/kabob.jpg" alt="kabob" class="corner-img kabob-corner top-right">
+          <img src="./menu/manti.jpg" alt="manti" class="corner-img manti-corner bottom-left">
+          <img src="./menu/shorva.png" alt="shorva" class="corner-img shorva-corner bottom-right">
         </div>
 
       </div>
@@ -223,7 +229,7 @@
         </div>
 
         <div class="menu-item">
-          <img src="./menu/shorva.jpg" alt="menu item">
+          <img src="./menu/shorva.png" alt="menu item">
           <h3>Sho'rva</h3>
           <p>In the new era of technology we look in the future with certainty and pride to for our company and.</p>
           <div class="price">
@@ -240,7 +246,7 @@
 
         <div class="menu-item">
           <img src="./menu/kabob.jpg" alt="menu item">
-          <h3>Kabob qiyma</h3>
+          <h3>Qiyma</h3>
           <p>In the new era of technology we look in the future with certainty and pride to for our company and.</p>
           <div class="price">
             <b>Dona 10.000 so'm</b>
@@ -254,7 +260,7 @@
           <p>In the new era of technology we look in the future with certainty and pride to for our company and.</p>
           <div class="price">
             <b>6.000 so'm</b>
-          <b>Kattasi 8.000 so'm</b>
+            <b>Kattasi 8.000 so'm</b>
           </div>
         </div>
 
@@ -297,7 +303,7 @@
 
         <div class="menu-item">
           <img src="./menu/gazsiz.png" alt="menu item">
-          <h3>Gazsiz suv</h3>
+          <h3>Suv</h3>
           <p>In the new era of technology we look in the future with certainty and pride to for our company and.</p>
           <div class="price">
             <br>
@@ -374,15 +380,11 @@
       <form>
         <div class="form-group">
           <label for="date">Sana</label>
-          <input type="date" id="date" value="2021-01-04">
+          <input type="text" id="date" placeholder="2021-01-04">
         </div>
         <div class="form-group">
           <label for="time">Soat</label>
-          <select id="time">
-            <option value="06:30 PM">06:30 PM</option>
-            <option value="07:00 PM">07:00 PM</option>
-            <option value="07:30 PM">07:30 PM</option>
-          </select>
+          <input type="text" placeholder="8:30">
         </div>
         <div class="form-group">
           <label for="name">Ism Familiyangiz</label>
@@ -390,16 +392,12 @@
         </div>
         <div class="form-group">
           <label for="phone">Raqam</label>
-          <input type="tel" id="phone" placeholder="+998 90 000 00 00">
+          <input type="tel" id="phone" name="phone" pattern="\+998[0-9]{9}" required="" placeholder="Telefon Raqam"
+            maxlength="13" oninput="this.value = this.value.replace(/[^0-9+]/g, '')" class="test">
         </div>
         <div class="form-group">
           <label for="persons">Necha kishilikni tanlash</label>
-          <select id="persons">
-            <option value="1">1 ta</option>
-            <option value="2">2 ta</option>
-            <option value="3">3 ta</option>
-            <option value="5">5 ta</option>
-          </select>
+          <input type="text" name="" id="" placeholder="8">
         </div>
         <button type="submit" class="book-btn">Tasdiqlash</button>
       </form>
@@ -433,13 +431,12 @@
       <div class="footer-section">
         <h3>Pages</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Delivery</a></li>
+          <li><a href="#home">Kirish</a></li>
+          <li><a href="#video">Video</a></li>
+          <li><a href="#about">Lokatsiya</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#customers">Izohlar</a></li>
+          <li><a href="#book-section">Joy band qilish</a></li>
         </ul>
       </div>
       <div class="footer-section food-instagram">
@@ -455,18 +452,19 @@
         </ul>
       </div>
       <div class="footer-section food-instagram">
-        <h3>Follow Us On Instagram</h3>
+        <h3>Eng Yuqori va Mazali Taom</h3>
         <div class="instagram-gallery">
-          <img src="./img/food.png" alt="Instagram 1">
-          <img src="./img/food.png" alt="Instagram 1">
-          <img src="./img/food.png" alt="Instagram 1">
-          <img src="./img/food.png" alt="Instagram 1">
+          <img src="./menu/osh.jpg" alt="Instagram 1">
+          <img src="./menu/kabob.jpg" alt="Instagram 1">
+          <img src="./menu/manti.jpg" alt="Instagram 1">
+          <img src="./menu/shorva.png" alt="Instagram 1">
         </div>
       </div>
     </div>
   </footer>
   <div class="copyright">
-    <p>Copyright © 2025 <a href="#">Hammasi-BIrda-jamoasi.</a> Barcha ma'lumotlar himoyalangan.</p>
+    <p>Copyright © 2025 <a href="https://hammasibirda.netlify.app" target="_blank">Hammasi-BIrda-jamoasi.</a> Barcha
+      ma'lumotlar himoyalangan.</p>
   </div>
 
 
