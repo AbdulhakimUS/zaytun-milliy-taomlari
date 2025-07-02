@@ -19,6 +19,9 @@
 
 /* ≥850px */
 @media (max-width: 850px) {
+  .corner-images{
+    display: none;
+  }
   .menu-toggle {
     display: block;
   }
