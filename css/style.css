@@ -152,7 +152,7 @@ header a:hover {
 
 .nav-links a:hover {
   color: var(--fill-color) !important;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .nav-links a.active {
