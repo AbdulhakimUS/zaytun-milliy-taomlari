@@ -125,7 +125,9 @@
   }
 
   .bgc-img {
-    display: none;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
   }
 
   .btn-group-home {
@@ -197,12 +199,12 @@
   }
 
   .photo-wrapper {
-    height: auto;
+    height: 600px;
   }
-
+/* 
   #home {
     height: 400px;
-  }
+  } */
 }
 
 
