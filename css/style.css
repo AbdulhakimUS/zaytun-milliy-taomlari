@@ -773,7 +773,11 @@ header a:hover {
   width: 30px;
   margin-right: 10px;
 }
-
+.instagram-gallery{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .instagram-gallery img {
   width: 140px;
   height: 100px;
